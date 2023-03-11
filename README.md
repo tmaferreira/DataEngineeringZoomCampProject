@@ -9,17 +9,18 @@ The project covers main data engineering skills taught in the course:
 - Batch processing: Spark
 
 ## Architecture Diagram
-TBD
+
+![Arquitetura_v1](https://user-images.githubusercontent.com/69354054/224508395-02dfd148-126a-4e91-96ee-b6b58df1502f.png)
 
 ## Technologies
 - **Google Cloud Platform (GCP)**:
   - **Google Cloud Storage (GCS)**: Data Lake
   - **BigQuery**: Data Warehouse
-- **Terraform**: Infrastructure-as-Code (IaC)
-- **SQL**: Data Analysis & Exploration
-- **Prefect**: Workflow Orchestration
 - **dbt**: Data Transformation
 - **Spark**: Distributed Processing
+- **SQL**: Data Analysis & Exploration
+- **Prefect**: Workflow Orchestration
+- **Looker Studio**: Visualize Data
 
 ## Dataset
 US car crash dataset (covers 49 states).
