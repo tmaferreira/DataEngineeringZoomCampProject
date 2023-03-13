@@ -34,4 +34,15 @@ More information about this dataset: [Author blog](https://smoosavi.org/datasets
 
 ## How to reproduce this project?
 
+#### Step 1: Clone this repo
 Clone the repo into your local machine:  ```git clone git@github.com:tmaferreira/DataEngineeringZoomCampProject.git```
+
+#### Step 2: Setup of GCP
+1. Create a [Google Cloud Platform (GCP)](https://cloud.google.com/) free account
+2. Create a GCP project with the name **dezoomcamp-finalproject** (Note: Save the assigned Project ID. Projects have a unique ID and for that reason another ID will be assigned)
+3. Create a Service Account:
+  - Go to **IAM & Admin > Service accounts > Create service account**
+  - Provide a service account name and grant the roles: **Viewer**, **BigQuery Admin**, **Storage Admin** and **Storage Object Admin**
+  - Download the Service Account json file, rename it to **google_credentials_project.json**
+ 
+
