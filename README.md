@@ -65,7 +65,7 @@ git clone git@github.com:tmaferreira/DataEngineeringZoomCampProject.git
 #### Step 3: Creation of a GCP Infrastructure
 1. Install [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 2. Copy files (**main.tf** and **variables.tf**) for the infrastructure creation (Use files created in Zoomcamp course: [Terraform files](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/week_1_basics_n_setup/1_terraform_gcp/terraform))
-3. In the file variables.tf change variable **BQ_DATASET** to: **us_traffic_accidents**
+3. In the file variables.tf change variable **BQ_DATASET** to: **us_traffic_accidents_data**
 4. Execute the following commands to plan the creation of the GCP infrastructure:
 ```bash
 # Initialize state file (.tfstate)
