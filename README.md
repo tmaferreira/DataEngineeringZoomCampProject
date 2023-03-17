@@ -16,6 +16,7 @@ The project covers main data engineering skills taught in the course:
 - **Google Cloud Platform (GCP)**:
   - **Google Cloud Storage (GCS)**: Data Lake
   - **BigQuery**: Data Warehouse
+- **Terraform**: Infrastructure as code (IaC)
 - **dbt**: Data Transformation
 - **Spark**: Distributed Processing
 - **SQL**: Data Analysis & Exploration
