@@ -86,8 +86,3 @@ terraform apply -var="project=dezoomcamp-finalproject"
 
 It is possible to see in the GCP console that the Infrastructure was correctly created.
 
-```bash
-# Delete infra after your work, to avoid costs on any running services
-terraform destroy
-```
-
