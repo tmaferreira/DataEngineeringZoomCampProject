@@ -10,7 +10,7 @@ The project covers main data engineering skills taught in the course:
 
 ## Architecture Diagram
 
-![Arquitetura_v1](https://user-images.githubusercontent.com/69354054/224508395-02dfd148-126a-4e91-96ee-b6b58df1502f.png)
+![Arquitetura_v2](https://user-images.githubusercontent.com/69354054/226065772-56a0a07a-aa5d-47e5-a9e6-926913099c0d.png)
 
 ## Technologies
 - **Google Cloud Platform (GCP)**:
@@ -37,7 +37,7 @@ More information about this dataset: [Author blog](https://smoosavi.org/datasets
 #### Step 1: Clone this repo
 Clone the repo into your local machine:  
 ```bash
-  git clone git@github.com:tmaferreira/DataEngineeringZoomCampProject.git
+git clone git@github.com:tmaferreira/DataEngineeringZoomCampProject.git
 ```
 
 #### Step 2: Setup of GCP
@@ -50,11 +50,44 @@ Clone the repo into your local machine:
     - Download [SDK](https://cloud.google.com/sdk/docs/install-sdk) for local setup
     - Set environment variable to point to your downloaded GCP keys:
     ```bash
-      export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
-      
-      # Refresh token/session, and verify authentication
-      gcloud auth application-default login
+    export GOOGLE_APPLICATION_CREDENTIALS="<path/to/your/service-account-authkeys>.json"
     ```
+    ```bash
+    # Refresh token/session, and verify authentication
+    gcloud auth application-default login
+    ```
+    
 4. Enable the following APIs:
     - [Identity and Access Management (IAM) API](https://console.cloud.google.com/apis/library/iam.googleapis.com)
     - [IAM Service Account Credentials API](https://console.cloud.google.com/apis/library/iamcredentials.googleapis.com)
+
+
+#### Step 3: Creation of a GCP Infrastructure
+1. Install [Terraform](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
+2. Copy files (**main.tf** and **variables.tf**) for the infrastructure creation (Use files created in Zoomcamp course: [Terraform files](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/week_1_basics_n_setup/1_terraform_gcp/terraform))
+3. In the file variables.tf change variable **BQ_DATASET** to: **us_traffic_accidents**
+4. Execute the following commands to plan the creation of the GCP infrastructure:
+```bash
+# Initialize state file (.tfstate)
+terraform init
+
+# Check changes to new infra plan
+# -var="project=<your-gcp-project-id>"
+
+terraform plan -var="project=dezoomcamp-finalproject"
+```
+
+```bash
+# Create new infra
+# -var="project=<your-gcp-project-id>"
+
+terraform apply -var="project=dezoomcamp-finalproject"
+```
+
+It is possible to see in the GCP console that the Infrastructure was correctly created.
+
+```bash
+# Delete infra after your work, to avoid costs on any running services
+terraform destroy
+```
+
