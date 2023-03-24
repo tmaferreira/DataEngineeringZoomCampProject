@@ -35,10 +35,14 @@ More information about this dataset: [Author blog](https://smoosavi.org/datasets
 
 ## How to reproduce this project?
 
-#### Step 1: Clone this repo
-Clone the repo into your local machine:  
+#### Step 1: Clone this repo and install necessary requirements
+1. Clone the repo into your local machine:  
 ```bash
 git clone git@github.com:tmaferreira/DataEngineeringZoomCampProject.git
+```
+2. Install all required dependencies into your environment
+```bash
+pip3 install -r requirements.txt
 ```
 
 #### Step 2: Setup of GCP
