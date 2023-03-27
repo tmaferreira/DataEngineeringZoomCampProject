@@ -1,7 +1,11 @@
-# Data Engineering ZoomCamp Course Project - Cohort 2023
+# Data Engineering ZoomCamp Course Project - US Accidents
+
+<p align="center">
+  <img src="https://static.vecteezy.com/system/resources/previews/002/395/151/original/modern-city-with-road-traffic-vector.jpg"/>
+</p>
 
 ## Preface
-This repository contains the course project for the Data Engineering Zoomcamp organized by the by [DataTalks.Club](https://datatalks.club/) community.
+This repository contains the course project for the Data Engineering Zoomcamp (Cohort 2023) organized by the by [DataTalks.Club](https://datatalks.club/) community.
 The project covers main data engineering skills taught in the course: 
 - Workflow Orchestration: Data Lake, Prefect tool, ETL with GCP & Prefect
 - Data Warehouse: BigQuery
