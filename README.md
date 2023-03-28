@@ -1,7 +1,7 @@
 # Data Engineering ZoomCamp Course Project - US Accidents
 
 <p align="center">
-  <img src="https://static.vecteezy.com/system/resources/previews/002/395/151/original/modern-city-with-road-traffic-vector.jpg"/>
+  <img width="80%" src="https://static.vecteezy.com/system/resources/previews/002/395/151/original/modern-city-with-road-traffic-vector.jpg"/>
 </p>
 
 ## Preface
@@ -14,9 +14,11 @@ The project covers main data engineering skills taught in the course:
 
 ## Architecture Diagram
 
-![Arquitetura_v2](https://user-images.githubusercontent.com/69354054/226065772-56a0a07a-aa5d-47e5-a9e6-926913099c0d.png)
+<p align="center">
+  <img width="60%" src="https://user-images.githubusercontent.com/69354054/226065772-56a0a07a-aa5d-47e5-a9e6-926913099c0d.png"/>
+</p>
 
-## Technologies
+## Technologies used in this project
 - **Google Cloud Platform (GCP)**:
   - **Google Cloud Storage (GCS)**: Data Lake
   - **BigQuery**: Data Warehouse
@@ -30,6 +32,26 @@ The project covers main data engineering skills taught in the course:
 ## Dataset
 US car crash dataset (covers 49 states).
 Crash data is collected from February 2016 to December 2021 using various APIs that provide streaming traffic incident (or event) data. These APIs transmit traffic data captured by a variety of entities, such as US and state departments of transportation, law enforcement agencies, traffic cameras, and traffic sensors on road networks. There are currently around 2.8 million crash records in this dataset.
+
+The dataset has 47 columns, but for the present project I decided to select only the relevant columns for my analysis. The following columns will be used:
+
+<div align="center">
+  
+| #  | Attribute             |                     Description                                      |
+|:--:|:---------------------:|----------------------------------------------------------------------|
+|  1 | **ID**                | This is a unique identifier of the accident record.                  |
+|  2 | **Severity**          | Shows the severity of the accident, a number between 1 and 4. <br> 1 indicates the least impact on traffic (i.e., short delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e., long delay).         |
+|  3 | **Start_Time**        | Shows start time of the accident in local time zone.                 |
+|  4 | **End_Time**          | Shows end time of the accident in local time zone. <br> End time here refers to when the impact of accident on traffic flow was dismissed.                                                                                          |
+|  5 | **Description**       | Shows natural language description of the accident.	                |
+|  6 | **Street**            | Shows the street name in address field.	                            |
+|  7 | **City**              | Shows the city in address field.	                                    |
+|  8 | **State**             | Shows the state in address field.	                                  |
+|  9 | **Country**           | Shows the country in address field.                                  |
+| 10 | **Weather_Condition** | Shows the weather condition (rain, snow, thunderstorm, fog, etc.)	  |
+| 11 | **Sunrise_Sunset**    | Shows the period of day (i.e. day or night) based on sunrise/sunset.	|
+  
+</div>
 
 More information about this dataset: [Author blog](https://smoosavi.org/datasets/us_accidents) and [Kaggle](https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents)
 
