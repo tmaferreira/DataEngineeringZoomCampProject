@@ -119,7 +119,12 @@ It is possible to see in the GCP console that the Infrastructure was correctly c
 
 #### Step 4: Setup of Kaggle API
 1. Create a [Kaggle](https://www.kaggle.com/) free account
-2. Click on your avatar and go to Account menu and click on the option "Create New API Token" and download the json file for local setup
+2. Create an API token:
+  - Click on your avatar
+  - Go to Account menu
+  - Click on the option "Create New API Token"
+  - Download the json file for local setup
+
 3. In your local setup, copy the file into the path: 
 ```bash
 ~/.kaggle/
