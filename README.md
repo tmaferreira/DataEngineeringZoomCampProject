@@ -138,3 +138,28 @@ To see all available API options and commands:
 ```bash
  kaggle --help
  ```
+
+#### Step 5: Setup orchestration using Prefect
+1. Setup the prefect server so that you can access the UI:
+```bash
+ prefect orion start
+ ```
+2. Access the UI in your browser: **http://127.0.0.1:4200/**
+3. For the connection with GCP Buckets it is necessary to create a block:
+  - In the side menu click on the option **Blocks**
+  - Click on the '+' button and select the **GCS Bucket** option
+  - Fill in the required fields:
+    <img width="925" alt="image" src="https://user-images.githubusercontent.com/69354054/229305723-a3ef5438-33d6-4111-94e2-d5aa9165fd14.png">
+
+  - In the **Gcp Credentials** field click on the **Add** button
+  - Fill in the **Block Name** field:
+    <img width="939" alt="image" src="https://user-images.githubusercontent.com/69354054/229306009-5e698082-e3cf-4e53-be74-d26e89e26f8f.png">
+  
+  - Using the service account json file that was downloaded in step 2, copy its content and paste it in the **Service Account Info** field
+  - Click on the **Create** button and you will be redirected to the previous GCS Bucket block creation page:
+  - In the **Gcp Credentials** field select the Gcp credential created previously:
+  <img width="928" alt="image" src="https://user-images.githubusercontent.com/69354054/229306194-2c3b0517-4ec9-4293-bffc-31a153741f29.png">
+  
+  - Click on the **Create** button to create the block
+  
+
