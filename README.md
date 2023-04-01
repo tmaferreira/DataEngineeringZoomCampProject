@@ -117,3 +117,19 @@ terraform apply -var="project=dezoomcamp-finalproject"
 
 It is possible to see in the GCP console that the Infrastructure was correctly created.
 
+#### Step 4: Setup of Kaggle API
+1. Create a [Kaggle](https://www.kaggle.com/) free account
+2. Click on your avatar and go to Account menu and click on the option "Create New API Token" and download the json file for local setup
+3. In your local setup, copy the file into the path: 
+```bash
+~/.kaggle/
+```
+4. For your security, ensure that other users of your computer do not have read access to your credentials:
+```bash
+chmod 600 ~/.kaggle/kaggle.json
+```
+
+To see all available API options and commands:
+```bash
+ kaggle --help
+ ```
