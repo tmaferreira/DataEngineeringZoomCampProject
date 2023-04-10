@@ -28,6 +28,3 @@ select
     cast(sunrise_sunset as string) as sunrise_sunset
 
 from {{ source("staging", "us_traffic_accidents") }}
-
--- dbt build --m <model.sql> --var 'is_test_run: false'
-{% if var("is_test_run", default=false) %} limit 100 {% endif %}
