@@ -7,25 +7,77 @@ sources:
 
     tables:
       - name: us_traffic_accidents
-
+      - name: stg_us_traffic_accidents
+       
 models:
-    - name: stg_us_traffic_accidents
+    - name: us_traffic_accidents
       description: >
         US car crash dataset (covers 49 states). 
         Crash data is collected from February 2016 to December 2021 using various APIs that provide streaming traffic incident (or event) data. 
-        These APIs transmit traffic data captured by a variety of entities, such as US and state departments of transportation, law enforcement agencies, 
-        traffic cameras, and traffic sensors on road networks. There are currently around 2.8 million crash records in this dataset.
+        These APIs transmit traffic data captured by a variety of entities, such as US and state departments of transportation, law enforcement agencies, traffic cameras, and traffic sensors on road networks. There are currently around 2.8 million crash records in this dataset.
       columns:
           - name: accident_id
             description: Primary key for this table, generated from ID column.
 
           - name: severity 
-            description: > 
-                Shows the severity of the accident, a number between 1 and 4.
-                1 = Indicates the least impact on traffic (i.e., short delay as a result of the accident)
-                4 = Indicates a significant impact on traffic (i.e., long delay)
+            description: >
+              Shows the severity of the accident, a number between 1 and 4.
+              1 = Indicates the least impact on traffic (i.e., short delay as a result of the accident)
+              4 = Indicates a significant impact on traffic (i.e., long delay)
 
-          - name: start_time 
+          - name: start_date
+            description: Shows the date of the accident was started.
+
+          - name: end_date
+            description: Shows the date of the accident was ended.
+
+          - name: start_time
+            description: Shows start time of the accident in local time zone.
+
+          - name: end_time
+            description: Shows end time of the accident in local time zone. End time here refers to when the impact of accident on traffic flow was dismissed.
+
+          - name: description
+            description: Shows natural language description of the accident.
+
+          - name: street
+            description: Shows the street name in address field.
+
+          - name: city
+            description: Shows the city in address field.
+
+          - name: state
+            description: Shows the state in address field.
+
+          - name: country
+            description: Shows the country in address field.
+          
+          - name: weather_condition
+            description: Shows the weather condition (rain, snow, thunderstorm, fog, etc.)
+          
+          - name: sunrise_sunset
+            description: Shows the period of day (i.e. day or night) based on sunrise/sunset.
+
+    - name: stg_us_traffic_accidents
+      description: >
+        US car crash dataset (covers 49 states) staging table.
+      columns:
+          - name: accident_id
+            description: Primary key for this table, generated from ID column.
+
+          - name: severity 
+            description: >
+              Shows the severity of the accident, a number between 1 and 4.
+              1 = Indicates the least impact on traffic (i.e., short delay as a result of the accident)
+              4 = Indicates a significant impact on traffic (i.e., long delay)
+
+          - name: start_date
+            description: Shows the date of the accident was started.
+
+          - name: end_date
+            description: Shows the date of the accident was ended.
+
+          - name: start_time
             description: Shows start time of the accident in local time zone.
 
           - name: end_time
