@@ -140,7 +140,7 @@ To see all available API options and commands:
  ```
 
 #### Step 5: Setup orchestration using Prefect
-1. Setup the prefect server so that you can access the UI:
+1. Setup the prefect server so that you can access the UI. Run the following command in a CL terminal:
 ```bash
  prefect orion start
  ```
@@ -162,4 +162,11 @@ To see all available API options and commands:
   
   - Click on the **Create** button to create the block
   
+4. To execute the flow, run the following commands in a different CL terminal than step 1:
+```bash
+python prefect/flows/api_to_gcs_to_bq.py
+ ```
+
+5. Check Data in BigQuery:
+- The data will be available at dezoomcamp-finalproject.dbt_us_traffic_accidents and in production version at dezoomcamp-finalproject.production.dim_us_traffic_accidents (dimension table) and dezoomcamp-finalproject.production.stg_us_traffic_accidents (staging table).
 
