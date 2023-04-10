@@ -167,6 +167,45 @@ To see all available API options and commands:
 python prefect/flows/api_to_gcs_to_bq.py
  ```
 
-5. Check Data in BigQuery:
-- The data will be available at dezoomcamp-finalproject.dbt_us_traffic_accidents and in production version at dezoomcamp-finalproject.production.dim_us_traffic_accidents (dimension table) and dezoomcamp-finalproject.production.stg_us_traffic_accidents (staging table).
+### Production Table
+
+**dbt lineage:**
+
+<p align="center">
+  <img width="80%" src="https://user-images.githubusercontent.com/69354054/231011761-b58f7bf3-9789-4d85-9c4a-1716829d963c.png"/>
+</p>
+
+**Check Data in BigQuery**:
+- The data will be available at **dezoomcamp-finalproject.dbt_us_traffic_accidents**
+- The production version will be available at **dezoomcamp-finalproject.production.dim_us_traffic_accidents** (dimension table) and **dezoomcamp-finalproject.production.stg_us_traffic_accidents** (staging table)
+
+<p align="center">
+  <img width="80%" src="https://user-images.githubusercontent.com/69354054/231011864-133e391e-ea48-465d-8f31-812aa28ca18f.png"/>
+</p>
+
+**DW Table Structure:**
+<div align="center">
+  
+| #  | Attribute             |                     Description                                      |
+|:--:|:---------------------:|----------------------------------------------------------------------|
+|  1 | **accident_id**       | This is a unique identifier of the accident record.                  |
+|  2 | **severity_id**       | Shows the severity of the accident, a number between 1 and 4. <br> 1 indicates the least impact on traffic (i.e., short delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e., long delay).         |
+|  3 | **start_date**        | Shows start date of the accident was started.                        |
+|  4 | **end_date**          | Shows end date of the accident was ended.                            |
+|  5 | **start_time**        | Shows start time of the accident in local time zone.                 |
+|  6 | **end_time**          | Shows end time of the accident in local time zone. <br> End time here refers to when the impact of accident on traffic flow was dismissed.                                                                                          |
+|  7 | **description**       | Shows natural language description of the accident.	                |
+|  8 | **street**            | Shows the street name in address field.	                            |
+|  9 | **city**              | Shows the city in address field.	                                    |
+| 10 | **state**             | Shows the state in address field.	                                  |
+| 11 | **country**           | Shows the country in address field.                                  |
+| 12 | **weather_condition** | Shows the weather condition (rain, snow, thunderstorm, fog, etc.)	  |
+| 13 | **sunrise_sunset**    | Shows the period of day (i.e. day or night) based on sunrise/sunset.	|
+</div>
+
+![image](https://user-images.githubusercontent.com/69354054/231012310-0f2b2540-e59d-4910-97b5-5c62c8803637.png)
+
+**Partitioning and Clustering:**
+
+![image](https://user-images.githubusercontent.com/69354054/231012117-8d3dc96a-9e35-4443-84a6-e05cd30cbf29.png)
 
