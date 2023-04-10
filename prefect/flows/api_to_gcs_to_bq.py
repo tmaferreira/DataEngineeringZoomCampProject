@@ -90,7 +90,7 @@ def write_bq(path: Path) -> None:
     gcp_credentials_block = GcpCredentials.load("gcs-credentials-zoomcap-finalproject")
 
     df_final.to_gbq(
-        destination_table="us_traffic_accidents_data.us_traffic_accidents_transformed",
+        destination_table="us_traffic_accidents_data.us_traffic_accidents",
         project_id="dezoomcamp-finalproject",
         credentials=gcp_credentials_block.get_credentials_from_service_account(),
         chunksize=500_000,
