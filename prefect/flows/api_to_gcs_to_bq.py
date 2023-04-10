@@ -48,10 +48,10 @@ def transform_data(df_us_accidents: pd.DataFrame) -> pd.DataFrame:
 
     # Convert some columns to date and time format
     df_us_accidents['Start_Date'] = pd.to_datetime(df_us_accidents['Start_Time']).dt.strftime('%Y-%m-%d')
-    df_us_accidents['Start_Hour'] = pd.to_datetime(df_us_accidents['Start_Time']).dt.strftime('%H:%M:%S')
-
     df_us_accidents['End_Date'] = pd.to_datetime(df_us_accidents['End_Time']).dt.strftime('%Y-%m-%d')
+    
     df_us_accidents['End_Hour'] = pd.to_datetime(df_us_accidents['End_Time']).dt.strftime('%H:%M:%S')
+    df_us_accidents['Start_Hour'] = pd.to_datetime(df_us_accidents['Start_Time']).dt.strftime('%H:%M:%S')
 
     df_us_accidents.drop(['Start_Time', 'End_Time'], axis="columns", inplace=True)
     
