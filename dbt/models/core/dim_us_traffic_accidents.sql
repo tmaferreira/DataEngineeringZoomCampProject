@@ -1,8 +1,8 @@
 {{ config(
         materialized = "table",  
         partition_by = {
-            "field": "start_datetime",
-            "data_type": "timestamp",
+            "field": "start_date",
+            "data_type": "date",
             "granularity": "year"
         },
         cluster_by = "country"
@@ -14,9 +14,12 @@ select
     {{ dbt_utils.surrogate_key(["ID"]) }} as accident_id,
     cast(severity as integer) as severity_id,
 
-    -- timestamps
-    cast(start_time as timestamp) as start_datetime,
-    cast(end_time as timestamp) as end_datetime,
+     -- date and times
+    cast(Start_Date as date) as start_date,
+    cast(End_Date as date) as end_date,
+
+    cast(Start_Hour as time) as start_time,
+    cast(End_Hour as time) as end_time,
 
     -- accident info
     cast(description as string) as description,
