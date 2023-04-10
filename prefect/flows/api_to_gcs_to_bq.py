@@ -1,11 +1,12 @@
 import os
 import pandas as pd
 import numpy as np
+import time
 
 from pathlib import Path
 from prefect import flow, task
 from prefect.tasks import task_input_hash
-from datetime import timedelta
+from datetime import timedelta, datetime
 from prefect_gcp.cloud_storage import GcsBucket
 from prefect_gcp import GcpCredentials
 
@@ -29,7 +30,7 @@ def transform_data(df_us_accidents: pd.DataFrame) -> pd.DataFrame:
     print(f"Pre: Missing values: {df_us_accidents.isna().sum().sum()}")
 
     # Fill missing values with value "Unknown"
-    columns_with_missing_values = [ 'Street', 'City', 'Weather_Condition', 'Sunrise_Sunset']
+    columns_with_missing_values = ['Street', 'City', 'Weather_Condition', 'Sunrise_Sunset']
     df_us_accidents[columns_with_missing_values] = df_us_accidents[columns_with_missing_values].fillna('Unknown')
     df_us_accidents[columns_with_missing_values] = df_us_accidents[columns_with_missing_values].replace(np.nan, 'Unknown')
 
@@ -44,6 +45,15 @@ def transform_data(df_us_accidents: pd.DataFrame) -> pd.DataFrame:
     df_us_accidents.Country = df_us_accidents.Country.astype('str')
     df_us_accidents.Weather_Condition = df_us_accidents.Weather_Condition.astype('str')
     df_us_accidents.Sunrise_Sunset = df_us_accidents.Sunrise_Sunset.astype('str')
+
+    # Convert some columns to date and time format
+    df_us_accidents['Start_Date'] = pd.to_datetime(df_us_accidents['Start_Time']).dt.strftime('%Y-%m-%d')
+    df_us_accidents['Start_Hour'] = pd.to_datetime(df_us_accidents['Start_Time']).dt.strftime('%H:%M:%S')
+
+    df_us_accidents['End_Date'] = pd.to_datetime(df_us_accidents['End_Time']).dt.strftime('%Y-%m-%d')
+    df_us_accidents['End_Hour'] = pd.to_datetime(df_us_accidents['End_Time']).dt.strftime('%H:%M:%S')
+
+    df_us_accidents.drop(['Start_Time', 'End_Time'], axis="columns", inplace=True)
     
     return df_us_accidents
 
@@ -80,11 +90,11 @@ def write_bq(path: Path) -> None:
     gcp_credentials_block = GcpCredentials.load("gcs-credentials-zoomcap-finalproject")
 
     df_final.to_gbq(
-        destination_table="us_traffic_accidents_data.us_traffic_accidents",
+        destination_table="us_traffic_accidents_data.us_traffic_accidents_transformed",
         project_id="dezoomcamp-finalproject",
         credentials=gcp_credentials_block.get_credentials_from_service_account(),
         chunksize=500_000,
-        if_exists="append",
+        if_exists="replace",
     )
 
     return
