@@ -12,24 +12,9 @@ The project covers main data engineering skills taught in the course:
 - Analytics engineering: dbt (data build tool), BigQuery and dbt
 - Batch processing: Spark
 
-## Architecture Diagram
+## US Accidents Project
 
-<p align="center">
-  <img width="60%" src="https://user-images.githubusercontent.com/69354054/226065772-56a0a07a-aa5d-47e5-a9e6-926913099c0d.png"/>
-</p>
-
-## Technologies Used
-- **Google Cloud Platform (GCP)**:
-  - **Google Cloud Storage (GCS)**: Data Lake
-  - **BigQuery**: Data Warehouse
-- **Terraform**: Infrastructure as code (IaC)
-- **dbt**: Data Transformation
-- **Spark**: Distributed Processing
-- **SQL**: Data Analysis & Exploration
-- **Prefect**: Workflow Orchestration
-- **Looker Studio**: Visualize Data
-
-## Dataset
+### Dataset
 US car crash dataset (covers 49 states).
 Crash data is collected from February 2016 to December 2021 using various APIs that provide streaming traffic incident (or event) data. These APIs transmit traffic data captured by a variety of entities, such as US and state departments of transportation, law enforcement agencies, traffic cameras, and traffic sensors on road networks. There are currently around 2.8 million crash records in this dataset.
 
@@ -59,7 +44,24 @@ More information about this dataset: [Author blog](https://smoosavi.org/datasets
 - Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, and Rajiv Ramnath. “A Countrywide Traffic Accident Dataset.”, 2019.
 - Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, Radu Teodorescu, and Rajiv Ramnath. "Accident Risk Prediction based on Heterogeneous Sparse Data: New Dataset and Insights." In proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, ACM, 2019.
 
-## DW Table Structure
+### Architecture Diagram
+
+<p align="center">
+  <img width="60%" src="https://user-images.githubusercontent.com/69354054/226065772-56a0a07a-aa5d-47e5-a9e6-926913099c0d.png"/>
+</p>
+
+### Technologies Used
+- **Google Cloud Platform (GCP)**:
+  - **Google Cloud Storage (GCS)**: Data Lake
+  - **BigQuery**: Data Warehouse
+- **Terraform**: Infrastructure as code (IaC)
+- **dbt**: Data Transformation
+- **Spark**: Distributed Processing
+- **SQL**: Data Analysis & Exploration
+- **Prefect**: Workflow Orchestration
+- **Looker Studio**: Visualize Data
+
+### DW Table Structure
 <div align="center">
   
 | #  | Attribute             |                     Description                                      |
