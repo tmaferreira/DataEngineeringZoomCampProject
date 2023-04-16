@@ -166,14 +166,24 @@ To see all available API options and commands:
 ```bash
 python prefect/flows/api_to_gcs_to_bq.py
  ```
+ 
+#### Step 6: Running the dbt flow
+1. Create a [dbt cloud] (https://www.getdbt.com/product/what-is-dbt/) free account
+2. Clone this repo
+3. In the command line of dbt running the following command:
+```bash
+dbt run
+```
 
-### Production Table
-
-**dbt lineage:**
+**dbt lineage generated:**
 
 <p align="center">
   <img width="70%" src="https://user-images.githubusercontent.com/69354054/231011761-b58f7bf3-9789-4d85-9c4a-1716829d963c.png"/>
 </p>
+
+### Validation of created tables
+
+#### Production Table
 
 **Check Data in BigQuery**:
 - The data will be available at **dezoomcamp-finalproject.dbt_us_traffic_accidents**
@@ -212,4 +222,6 @@ python prefect/flows/api_to_gcs_to_bq.py
 - Clustering by column **country** to group data that have the same country value
 
 Benefits of combining clustered and partitioned tables: [Combining clustered and partitioned tables](https://cloud.google.com/bigquery/docs/clustered-tables#combining_clustered_and_partitioned_tables)
+
+### Data visualization: Dashboard
 
