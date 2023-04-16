@@ -59,7 +59,7 @@ More information about this dataset: [Author blog](https://smoosavi.org/datasets
 - Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, and Rajiv Ramnath. “A Countrywide Traffic Accident Dataset.”, 2019.
 - Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, Radu Teodorescu, and Rajiv Ramnath. "Accident Risk Prediction based on Heterogeneous Sparse Data: New Dataset and Insights." In proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, ACM, 2019.
 
-**DW Table Structure:**
+## DW Table Structure
 <div align="center">
   
 | #  | Attribute             |                     Description                                      |
@@ -91,7 +91,23 @@ Benefits of combining clustered and partitioned tables: [Combining clustered and
 
 ### Data visualization: Dashboards
 
+#### Main Questions
+1. Which State/City/Street in US has reported most number of Accident Cases between 2016 and 2021?
+2. How are the weather conditions in most of the accident cases in US?
+3. Did most accidents occur at night or during the day?
 
+
+#### US Crash Accidents by State, City and Street - Dashboard
+
+Data filtered between Jan 1, 2016 - Dec 31, 2021:
+![image](https://user-images.githubusercontent.com/69354054/232343998-adb4a704-eed4-4084-b386-a7e060680e9c.png)
+
+#### US Crash Accidents by Severity, Weather Conditions, Day/Night and Date (Year and Month)
+
+Data filtered between Jan 1, 2016 - Dec 31, 2021:
+![image](https://user-images.githubusercontent.com/69354054/232332305-eb33f55f-c0b2-4306-b75b-ac3b7a3b2e6a.png)
+
+**More detailed analysis of the results obtained: [Data Analysis](https://github.com/tmaferreira/DataEngineeringZoomCampProject/blob/main/DataAnalysis/Dashboards.md)**
 
 ## How to reproduce this project?
 
