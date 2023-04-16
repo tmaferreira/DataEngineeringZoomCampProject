@@ -168,7 +168,7 @@ python prefect/flows/api_to_gcs_to_bq.py
  ```
  
 #### Step 6: Running the dbt flow
-1. Create a [dbt cloud] (https://www.getdbt.com/product/what-is-dbt/) free account
+1. Create a [dbt cloud](https://www.getdbt.com/product/what-is-dbt/) free account
 2. Clone this repo
 3. In the command line of dbt running the following command:
 ```bash
