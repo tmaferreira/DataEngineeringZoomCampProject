@@ -18,7 +18,7 @@ The project covers main data engineering skills taught in the course:
   <img width="60%" src="https://user-images.githubusercontent.com/69354054/226065772-56a0a07a-aa5d-47e5-a9e6-926913099c0d.png"/>
 </p>
 
-## Technologies used in this project
+## Technologies Used
 - **Google Cloud Platform (GCP)**:
   - **Google Cloud Storage (GCS)**: Data Lake
   - **BigQuery**: Data Warehouse
@@ -120,10 +120,10 @@ It is possible to see in the GCP console that the Infrastructure was correctly c
 #### Step 4: Setup of Kaggle API
 1. Create a [Kaggle](https://www.kaggle.com/) free account
 2. Create an API token:
-  - Click on your avatar
-  - Go to Account menu
-  - Click on the option "Create New API Token"
-  - Download the json file for local setup
+    - Click on your avatar
+    - Go to Account menu
+    - Click on the option "Create New API Token"
+    - Download the json file for local setup
 
 3. In your local setup, copy the file into the path: 
 ```bash
@@ -153,12 +153,12 @@ To see all available API options and commands:
 
   - In the **Gcp Credentials** field click on the **Add** button
   - Fill in the **Block Name** field:
-    <img width="939" alt="image" src="https://user-images.githubusercontent.com/69354054/229306009-5e698082-e3cf-4e53-be74-d26e89e26f8f.png">
+    <img width="925" alt="image" src="https://user-images.githubusercontent.com/69354054/229306009-5e698082-e3cf-4e53-be74-d26e89e26f8f.png">
   
   - Using the service account json file that was downloaded in step 2, copy its content and paste it in the **Service Account Info** field
   - Click on the **Create** button and you will be redirected to the previous GCS Bucket block creation page:
   - In the **Gcp Credentials** field select the Gcp credential created previously:
-  <img width="928" alt="image" src="https://user-images.githubusercontent.com/69354054/229306194-2c3b0517-4ec9-4293-bffc-31a153741f29.png">
+    <img width="925" alt="image" src="https://user-images.githubusercontent.com/69354054/229306194-2c3b0517-4ec9-4293-bffc-31a153741f29.png">
   
   - Click on the **Create** button to create the block
   
@@ -172,7 +172,7 @@ python prefect/flows/api_to_gcs_to_bq.py
 **dbt lineage:**
 
 <p align="center">
-  <img width="80%" src="https://user-images.githubusercontent.com/69354054/231011761-b58f7bf3-9789-4d85-9c4a-1716829d963c.png"/>
+  <img width="70%" src="https://user-images.githubusercontent.com/69354054/231011761-b58f7bf3-9789-4d85-9c4a-1716829d963c.png"/>
 </p>
 
 **Check Data in BigQuery**:
@@ -180,7 +180,7 @@ python prefect/flows/api_to_gcs_to_bq.py
 - The production version will be available at **dezoomcamp-finalproject.production.dim_us_traffic_accidents** (dimension table) and **dezoomcamp-finalproject.production.stg_us_traffic_accidents** (staging table)
 
 <p align="center">
-  <img width="80%" src="https://user-images.githubusercontent.com/69354054/231011864-133e391e-ea48-465d-8f31-812aa28ca18f.png"/>
+  <img width="30%" src="https://user-images.githubusercontent.com/69354054/231011864-133e391e-ea48-465d-8f31-812aa28ca18f.png"/>
 </p>
 
 **DW Table Structure:**
@@ -206,6 +206,10 @@ python prefect/flows/api_to_gcs_to_bq.py
 ![image](https://user-images.githubusercontent.com/69354054/231012310-0f2b2540-e59d-4910-97b5-5c62c8803637.png)
 
 **Partitioning and Clustering:**
-
 ![image](https://user-images.githubusercontent.com/69354054/231012117-8d3dc96a-9e35-4443-84a6-e05cd30cbf29.png)
+
+- Partition by column **start_date**, more specifically by **year** to obtain annual granularity
+- Clustering by column **country** to group data that have the same country value
+
+Benefits of combining clustered and partitioned tables: [Combining clustered and partitioned tables](https://cloud.google.com/bigquery/docs/clustered-tables#combining_clustered_and_partitioned_tables)
 
