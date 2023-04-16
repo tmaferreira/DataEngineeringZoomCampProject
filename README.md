@@ -59,6 +59,40 @@ More information about this dataset: [Author blog](https://smoosavi.org/datasets
 - Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, and Rajiv Ramnath. “A Countrywide Traffic Accident Dataset.”, 2019.
 - Moosavi, Sobhan, Mohammad Hossein Samavatian, Srinivasan Parthasarathy, Radu Teodorescu, and Rajiv Ramnath. "Accident Risk Prediction based on Heterogeneous Sparse Data: New Dataset and Insights." In proceedings of the 27th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems, ACM, 2019.
 
+**DW Table Structure:**
+<div align="center">
+  
+| #  | Attribute             |                     Description                                      |
+|:--:|:---------------------:|----------------------------------------------------------------------|
+|  1 | **accident_id**       | This is a unique identifier of the accident record.                  |
+|  2 | **severity_id**       | Shows the severity of the accident, a number between 1 and 4. <br> 1 indicates the least impact on traffic (i.e., short delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e., long delay).         |
+|  3 | **start_date**        | Shows start date of the accident was started.                        |
+|  4 | **end_date**          | Shows end date of the accident was ended.                            |
+|  5 | **start_time**        | Shows start time of the accident in local time zone.                 |
+|  6 | **end_time**          | Shows end time of the accident in local time zone. <br> End time here refers to when the impact of accident on traffic flow was dismissed.                                                                                          |
+|  7 | **description**       | Shows natural language description of the accident.	                |
+|  8 | **street**            | Shows the street name in address field.	                            |
+|  9 | **city**              | Shows the city in address field.	                                    |
+| 10 | **state**             | Shows the state in address field.	                                  |
+| 11 | **country**           | Shows the country in address field.                                  |
+| 12 | **weather_condition** | Shows the weather condition (rain, snow, thunderstorm, fog, etc.)	  |
+| 13 | **sunrise_sunset**    | Shows the period of day (i.e. day or night) based on sunrise/sunset.	|
+</div>
+
+![image](https://user-images.githubusercontent.com/69354054/231012310-0f2b2540-e59d-4910-97b5-5c62c8803637.png)
+
+**Partitioning and Clustering:**
+![image](https://user-images.githubusercontent.com/69354054/231012117-8d3dc96a-9e35-4443-84a6-e05cd30cbf29.png)
+
+- Partition by column **start_date**, more specifically by **year** to obtain annual granularity
+- Clustering by column **country** to group data that have the same country value
+
+Benefits of combining clustered and partitioned tables: [Combining clustered and partitioned tables](https://cloud.google.com/bigquery/docs/clustered-tables#combining_clustered_and_partitioned_tables)
+
+### Data visualization: Dashboards
+
+
+
 ## How to reproduce this project?
 
 #### Step 1: Clone this repo and install necessary requirements
@@ -192,36 +226,4 @@ dbt run
 <p align="center">
   <img width="30%" src="https://user-images.githubusercontent.com/69354054/231011864-133e391e-ea48-465d-8f31-812aa28ca18f.png"/>
 </p>
-
-**DW Table Structure:**
-<div align="center">
-  
-| #  | Attribute             |                     Description                                      |
-|:--:|:---------------------:|----------------------------------------------------------------------|
-|  1 | **accident_id**       | This is a unique identifier of the accident record.                  |
-|  2 | **severity_id**       | Shows the severity of the accident, a number between 1 and 4. <br> 1 indicates the least impact on traffic (i.e., short delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e., long delay).         |
-|  3 | **start_date**        | Shows start date of the accident was started.                        |
-|  4 | **end_date**          | Shows end date of the accident was ended.                            |
-|  5 | **start_time**        | Shows start time of the accident in local time zone.                 |
-|  6 | **end_time**          | Shows end time of the accident in local time zone. <br> End time here refers to when the impact of accident on traffic flow was dismissed.                                                                                          |
-|  7 | **description**       | Shows natural language description of the accident.	                |
-|  8 | **street**            | Shows the street name in address field.	                            |
-|  9 | **city**              | Shows the city in address field.	                                    |
-| 10 | **state**             | Shows the state in address field.	                                  |
-| 11 | **country**           | Shows the country in address field.                                  |
-| 12 | **weather_condition** | Shows the weather condition (rain, snow, thunderstorm, fog, etc.)	  |
-| 13 | **sunrise_sunset**    | Shows the period of day (i.e. day or night) based on sunrise/sunset.	|
-</div>
-
-![image](https://user-images.githubusercontent.com/69354054/231012310-0f2b2540-e59d-4910-97b5-5c62c8803637.png)
-
-**Partitioning and Clustering:**
-![image](https://user-images.githubusercontent.com/69354054/231012117-8d3dc96a-9e35-4443-84a6-e05cd30cbf29.png)
-
-- Partition by column **start_date**, more specifically by **year** to obtain annual granularity
-- Clustering by column **country** to group data that have the same country value
-
-Benefits of combining clustered and partitioned tables: [Combining clustered and partitioned tables](https://cloud.google.com/bigquery/docs/clustered-tables#combining_clustered_and_partitioned_tables)
-
-### Data visualization: Dashboard
 
