@@ -26,9 +26,9 @@ The dataset has 47 columns, but for the present project I decided to select only
 |:--:|:---------------------:|----------------------------------------------------------------------|
 |  1 | **ID**                | This is a unique identifier of the accident record.                  |
 |  2 | **Severity**          | Shows the severity of the accident, a number between 1 and 4. <br> 1 indicates the least impact on traffic (i.e., short delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e., long delay).         |
-|  3 | **Start_Time**        | Shows start time of the accident in local time zone.                 |
-|  4 | **End_Time**          | Shows end time of the accident in local time zone. <br> End time here refers to when the impact of accident on traffic flow was dismissed.                                                                                          |
-|  5 | **Description**       | Shows natural language description of the accident.	                |
+|  3 | **Start_Time**        | Shows the start time of the accident in local time zone.             |
+|  4 | **End_Time**          | Shows the end time of the accident in local time zone. <br> End time here refers to when the impact of accident on traffic flow was dismissed.                                                                                          |
+|  5 | **Description**       | Shows the natural language description of the accident.	            |
 |  6 | **Street**            | Shows the street name in address field.	                            |
 |  7 | **City**              | Shows the city in address field.	                                    |
 |  8 | **State**             | Shows the state in address field.	                                  |
@@ -68,10 +68,10 @@ More information about this dataset: [Author blog](https://smoosavi.org/datasets
 |  1 | **accident_id**       | This is a unique identifier of the accident record.                  |
 |  2 | **severity_id**       | Shows the severity of the accident, a number between 1 and 4. <br> 1 indicates the least impact on traffic (i.e., short delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e., long delay).         |
 |  3 | **start_date**        | Shows start date of the accident was started.                        |
-|  4 | **end_date**          | Shows end date of the accident was ended.                            |
-|  5 | **start_time**        | Shows start time of the accident in local time zone.                 |
-|  6 | **end_time**          | Shows end time of the accident in local time zone. <br> End time here refers to when the impact of accident on traffic flow was dismissed.                                                                                          |
-|  7 | **description**       | Shows natural language description of the accident.	                |
+|  4 | **end_date**          | Shows the end date of the accident was ended.                        |
+|  5 | **start_time**        | Shows the start time of the accident in local time zone.             |
+|  6 | **end_time**          | Shows the end time of the accident in local time zone. <br> End time here refers to when the impact of accident on traffic flow was dismissed.                                                                                          |
+|  7 | **description**       | Shows the natural language description of the accident.	            |
 |  8 | **street**            | Shows the street name in address field.	                            |
 |  9 | **city**              | Shows the city in address field.	                                    |
 | 10 | **state**             | Shows the state in address field.	                                  |
@@ -241,4 +241,10 @@ dbt run
 <p align="center">
   <img width="30%" src="https://user-images.githubusercontent.com/69354054/231011864-133e391e-ea48-465d-8f31-812aa28ca18f.png"/>
 </p>
+
+### Improvements
+- Add unit tests
+- Add CI/CD pipeline
+
+- 
 
