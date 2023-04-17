@@ -245,6 +245,3 @@ dbt run
 ### Improvements
 - Add unit tests
 - Add CI/CD pipeline
-
-- 
-
