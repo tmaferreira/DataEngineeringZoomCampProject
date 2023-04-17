@@ -13,10 +13,10 @@ Data filtered between Jan 1, 2016 - Dec 31, 2021:
 
 Main insights:
 - Total number of accidents in US: **2 845 342**
-- **California (CA)** was the state with the highest number of accidents in this period of time (**~ 795.9K accidents**). 
+- **California (CA)** was the state with the highest number of accidents in this period of time (~ **795.9K accidents**). 
 According to a survey carried out, the state of California is the most populous US state. 
 So, larger population in this state may be the reason for a greater number of road accidents;
-- Looking at cities of US, **Miami** had the most accidents (**~ 107K accidents**). 
+- Looking at cities of US, **Miami** had the most accidents (~ **107K accidents**). 
 Miami belongs to the state of Florida, which was the second state with the highest number of accidents in total;
 - In terms of streets, the **I-95 N (North)** road had the most accidents in this period of time (**39 853 accidents**). 
 Along I-95 in Rhode Island, several highway exits have sharp, sudden curves and poor road design, causing dozens of crashes and several traffic fatalities per year.
@@ -37,7 +37,7 @@ Main insights:
 Severity can vary between 1 and 4, where 1 indicates the least impact on traffic (ie, small delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e. large delay);
 - In most accidents, the atmospheric condition was classified as **Fair**, and it is possible to verify that there is a large part of the sample in which the atmospheric condition was not detailed (the value "other" was assigned);
 - Observing the data, we can also conclude that there was a greater number of accidents during the **day** (**63.7%**);
-- Filtering the data by year (between 2016 and 2021), we can see that there was a higher number of accidents in **2021** (**1511745 accidents**);
+- Filtering the data by year (between 2016 and 2021), we can see that there was a higher number of accidents in **2021** (**1 511 745 accidents**);
 - Observing the average of accidents per month between 2016 and 2021, it is concluded that the highest average of accidents was recorded in **December** and the lowest average in **March**.
 
 **References:**
