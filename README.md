@@ -101,12 +101,10 @@ Benefits of combining clustered and partitioned tables: [Combining clustered and
 
 #### US Crash Accidents by State, City and Street - Dashboard
 
-Data filtered between Jan 1, 2016 - Dec 31, 2021:
 ![image](https://user-images.githubusercontent.com/69354054/232343998-adb4a704-eed4-4084-b386-a7e060680e9c.png)
 
 #### US Crash Accidents by Severity, Weather Conditions, Day/Night and Date (Year and Month)
 
-Data filtered between Jan 1, 2016 - Dec 31, 2021:
 ![image](https://user-images.githubusercontent.com/69354054/232332305-eb33f55f-c0b2-4306-b75b-ac3b7a3b2e6a.png)
 
 **More detailed analysis of the results obtained: [Data Analysis](https://github.com/tmaferreira/DataEngineeringZoomCampProject/blob/main/DataAnalysis/Dashboards.md)**
