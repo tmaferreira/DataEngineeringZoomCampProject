@@ -56,8 +56,7 @@ More information about this dataset: [Author blog](https://smoosavi.org/datasets
   - **BigQuery**: Data Warehouse
 - **Terraform**: Infrastructure as code (IaC)
 - **dbt**: Data Transformation
-- **Spark**: Distributed Processing
-- **SQL**: Data Analysis & Exploration
+- **Pandas**: Data Analysis & Exploration
 - **Prefect**: Workflow Orchestration
 - **Looker Studio**: Visualize Data
 
