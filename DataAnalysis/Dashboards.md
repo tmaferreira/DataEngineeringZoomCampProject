@@ -11,6 +11,8 @@
 Data filtered between Jan 1, 2016 - Dec 31, 2021:
 ![image](https://user-images.githubusercontent.com/69354054/232915603-cbebe236-c9a8-4057-a980-fa5cb853fff5.png)
 
+**Note**: **Severity** can vary between 1 and 4, where 1 indicates the least impact on traffic (ie, small delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e. large delay);
+
 Main insights:
 - Total number of accidents between Jan 1, 2016 and Dec 31, 2021 in US: **2 845 342**
 - **California (CA)** was the state with the highest number of accidents in this period of time (~ **795.9K accidents**). 
@@ -33,9 +35,10 @@ These towns are small and have a small population, which could be the reason why
 Data filtered between Jan 1, 2016 - Dec 31, 2021:
 ![image](https://user-images.githubusercontent.com/69354054/232915741-2d1ca625-b6bd-4893-bf4f-731b796cc518.png)
 
+**Note**: **Severity** can vary between 1 and 4, where 1 indicates the least impact on traffic (ie, small delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e. large delay);
+
 Main insights:
-- In terms of accident severity, we can conclude that the majority of accidents were classified as **2**. 
-Severity can vary between 1 and 4, where 1 indicates the least impact on traffic (ie, small delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e. large delay);
+- In terms of accident severity, we can conclude that the majority of accidents were classified as **2**;
 - In most accidents, the atmospheric condition was classified as **Fair** (**38.9%**);
 - Observing the data, we can also conclude that there was a greater number of accidents during the **day** (**63.7%**);
 - Filtering the data by year (between 2016 and 2021), we can see that there was a higher number of accidents in **2021** (**1 511 745 accidents**);
@@ -46,15 +49,25 @@ Severity can vary between 1 and 4, where 1 indicates the least impact on traffic
 Data filtered between Jan 1, 2018 - Dec 31, 2028 and by State California (CA):
 ![image](https://user-images.githubusercontent.com/69354054/232914660-670e54e9-dade-4b9f-9d5d-d0c236321030.png)
 
-Main insights:
+**Notes:** 
+- **Weekday**: Days are counted from Sunday and the value of Sunday is 0, therefore the value of Saturday is 6.
+- **Severity** can vary between 1 and 4, where 1 indicates the least impact on traffic (ie, small delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e. large delay);
+
+In the state of California in the year 2018 we can conclude that:
+- The most dangerous streets in terms of accidents was **I5 N** and **San Diego Fwy S**;
+- 
 
 #### US Crash Accidents filtered by Date Range and State
 
 Data filtered between Jan 1, 2021 - Dec 31, 2021 and by State California (CA):
 ![image](https://user-images.githubusercontent.com/69354054/232915038-29b49f74-222b-4c4d-8d00-56df46a59eb7.png)
 
-Main insights:
+**Notes:** 
+- **Weekday**: Days are counted from Sunday and the value of Sunday is 0, therefore the value of Saturday is 6.
+- **Severity** can vary between 1 and 4, where 1 indicates the least impact on traffic (ie, small delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e. large delay);
 
+In the state of California in the year 2021 we can conclude that:
+- The most dangerous street in terms of accidents was 
 
 **References:**
 - [List of US states](https://uk.usembassy.gov/states-of-the-union-states-of-the-u-s/)
