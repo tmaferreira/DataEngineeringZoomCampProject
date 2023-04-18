@@ -97,14 +97,13 @@ Benefits of combining clustered and partitioned tables: [Combining clustered and
 2. How are the weather conditions in most of the accident cases in US?
 3. Did most accidents occur at night or during the day?
 
-
 #### US Crash Accidents by State, City and Street - Dashboard
 
-![image](https://user-images.githubusercontent.com/69354054/232343998-adb4a704-eed4-4084-b386-a7e060680e9c.png)
+![image](https://user-images.githubusercontent.com/69354054/232915603-cbebe236-c9a8-4057-a980-fa5cb853fff5.png)
 
 #### US Crash Accidents by Severity, Weather Conditions, Day/Night and Date (Year and Month)
 
-![image](https://user-images.githubusercontent.com/69354054/232332305-eb33f55f-c0b2-4306-b75b-ac3b7a3b2e6a.png)
+![image](https://user-images.githubusercontent.com/69354054/232915741-2d1ca625-b6bd-4893-bf4f-731b796cc518.png)
 
 **More detailed analysis of the results obtained: [Data Analysis](https://github.com/tmaferreira/DataEngineeringZoomCampProject/blob/main/DataAnalysis/Dashboards.md)**
 
