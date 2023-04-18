@@ -59,7 +59,7 @@ In the state of California in the year 2018 we can conclude that:
 - The most dangerous streets in terms of accidents was **I5 N** and **San Diego Fwy S**;
 - In terms of severity, most accidents were classified as **2** (some delay as a result of the accident);
 - The month of 2018 with the highest number of accidents was **December**;
-- The day of the week with the highest number of accidents was **Wednesday**. **Sunday* and **Saturday** were the days of the week with fewer recorded accidents.
+- The day of the week with the highest number of accidents was **Wednesday**. **Sunday** and **Saturday** were the days of the week with fewer recorded accidents.
 
 #### US Crash Accidents filtered by Date Range and State
 
