@@ -9,10 +9,10 @@
 #### US Crash Accidents by State, City and Street - Dashboard
 
 Data filtered between Jan 1, 2016 - Dec 31, 2021:
-![image](https://user-images.githubusercontent.com/69354054/232343998-adb4a704-eed4-4084-b386-a7e060680e9c.png)
+
 
 Main insights:
-- Total number of accidents in US: **2 845 342**
+- Total number of accidents between Jan 1, 2016 and Dec 31, 2021 in US: **2 845 342**
 - **California (CA)** was the state with the highest number of accidents in this period of time (~ **795.9K accidents**). 
 According to a survey carried out, the state of California is the most populous US state. 
 So, larger population in this state may be the reason for a greater number of road accidents;
@@ -30,15 +30,31 @@ These towns are small and have a small population, which could be the reason why
 
 #### US Crash Accidents by Severity, Weather Conditions, Day/Night and Date (Year and Month)
 
-![image](https://user-images.githubusercontent.com/69354054/232332305-eb33f55f-c0b2-4306-b75b-ac3b7a3b2e6a.png)
+Data filtered between Jan 1, 2016 - Dec 31, 2021:
+
 
 Main insights:
 - In terms of accident severity, we can conclude that the majority of accidents were classified as **2**. 
 Severity can vary between 1 and 4, where 1 indicates the least impact on traffic (ie, small delay as a result of the accident) and 4 indicates a significant impact on traffic (i.e. large delay);
-- In most accidents, the atmospheric condition was classified as **Fair**, and it is possible to verify that there is a large part of the sample in which the atmospheric condition was not detailed (the value "other" was assigned);
+- In most accidents, the atmospheric condition was classified as **Fair** (** %**);
 - Observing the data, we can also conclude that there was a greater number of accidents during the **day** (**63.7%**);
 - Filtering the data by year (between 2016 and 2021), we can see that there was a higher number of accidents in **2021** (**1 511 745 accidents**);
 - Observing the average of accidents per month between 2016 and 2021, it is concluded that the highest average of accidents was recorded in **December** and the lowest average in **March**.
+
+#### US Crash Accidents filtered by Date Range and State
+
+Data filtered between Jan 1, 2018 - Dec 31, 2028 and by State California (CA):
+<img width="531" alt="image" src="https://user-images.githubusercontent.com/69354054/232914660-670e54e9-dade-4b9f-9d5d-d0c236321030.png">
+
+Main insights:
+
+#### US Crash Accidents filtered by Date Range and State
+
+Data filtered between Jan 1, 2021 - Dec 31, 2021 and by State California (CA):
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/69354054/232915038-29b49f74-222b-4c4d-8d00-56df46a59eb7.png">
+
+Main insights:
+
 
 **References:**
 - [List of US states](https://uk.usembassy.gov/states-of-the-union-states-of-the-u-s/)
