@@ -244,4 +244,5 @@ dbt run
 ### Improvements
 - Add unit tests
 - Add CI/CD pipeline
+- Containerize the project
 - Perform deeper data analysis
