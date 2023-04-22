@@ -10,6 +10,7 @@ The project covers main data engineering skills taught in the course:
 - Workflow Orchestration: Data Lake, Prefect tool, ETL with GCP & Prefect
 - Data Warehouse: BigQuery
 - Analytics engineering: dbt (data build tool)
+- Data Analysis: Looker Studio
 
 ## US Accidents Project
 
